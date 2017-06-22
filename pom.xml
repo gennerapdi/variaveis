@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+  	
+  	<groupId>com.blank</groupId>
+  	<artifactId>com.blank</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+
+  	<packaging>war</packaging>
+  	
+  	<name>Blank</name>
+  	  
+	<properties>  
+  		<jdk.version>1.7</jdk.version>  
+ 	</properties>
+   
+  	<dependencies>  
+ 	</dependencies> 
+ 	
+ 	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+	 
+	 		<build>  
+	  			<finalName>blank</finalName>  
+				<resources>
+					<resource>
+						<directory>src/main/resources</directory>
+						<includes>
+							<include>*</include>
+						</includes>
+						<filtering>true</filtering>
+					</resource>
+				</resources>
+		
+				<testResources>
+					<testResource>
+						<directory>src/test/resources</directory>
+						<includes>
+							<include>*</include>
+						</includes>
+						<filtering>true</filtering>
+					</testResource>
+				</testResources>
+	  
+			  	<plugins>  
+			   		<plugin>  
+			    			<groupId>org.apache.maven.plugins</groupId>  
+			    			<artifactId>maven-compiler-plugin</artifactId>  
+			   			<version>3.2</version>  
+			    			<configuration> 
+							<encoding>UTF-8</encoding> 
+			      				<failOnMissingWebXml>false</failOnMissingWebXml>
+			    				<source>${jdk.version}</source>  
+			     				<target>${jdk.version}</target>  
+			    			</configuration>  
+					</plugin> 
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.4.0</version>
+						<executions>
+							<execution>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>grunt</executable>
+									<commandlineArgs>dev</commandlineArgs>
+									<workingDirectory>src/main/webapp/WEB-INF/</workingDirectory>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.4</version>
+						<configuration>
+							<warSourceExcludes>
+								WEB-INF/node_modules/**,
+								WEB-INF/dist/**,
+							</warSourceExcludes>
+						</configuration>
+					</plugin>			
+			  	</plugins>	  
+	 		</build> 
+	
+		</profile>
+		
+	</profiles>
+
+</project>
