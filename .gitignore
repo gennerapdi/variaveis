@@ -1,6 +1,7 @@
 .tmp
 .git
 src/main/webapp/WEB-INF/assets/node_modules
+src/main/webapp/WEB-INF/assets/bower_components
 src/main/webapp/WEB-INF/assets/lib
 src/main/webapp/WEB-INF/assets/dist
 
