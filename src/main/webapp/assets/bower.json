@@ -1,0 +1,24 @@
+{
+  "name": "variaveis",
+  "homepage": "https://github.com/gennerapdi/variaveis",
+  "authors": [
+    "gennera.pdi"
+  ],
+  "description": "bla bla",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-ui": "^1.12.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular": "^1.6.4"
+  }
+}
