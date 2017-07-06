@@ -15,7 +15,7 @@
   	  
 	<properties>  
         <jackson.version>2.4.3</jackson.version>
-  		<jdk.version>1.7</jdk.version>  
+  		<jdk.version>1.6</jdk.version>  
  	</properties>
    
   	<dependencies> 
@@ -26,7 +26,6 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-    	    <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet.jsp</groupId>
