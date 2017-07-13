@@ -15,10 +15,16 @@ app.controller('ExemploController', ['$scope', 'ExemploService',
 		    }, function(response) {
 				console.log(response)
 		    });
-	};	
+	};		
 	
 	$scope.salvar = function(usuario) {
-		$scope.usuarios.push(angular.copy(usuario));
+		ExemploService.salvar(usuario)
+		    .then(function(response) {
+		    	console.log(response.pdi);
+		    	$scope.usuarios.push(usuario);
+		    }, function(response) {
+				console.log(response)
+		    });
 	};
 	
   	init();

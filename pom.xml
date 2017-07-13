@@ -15,6 +15,7 @@
   	  
 	<properties>  
         <jackson.version>2.4.3</jackson.version>
+        <mysql.connector.version>5.1.31</mysql.connector.version>
   		<jdk.version>1.6</jdk.version>  
  	</properties>
    
@@ -50,6 +51,20 @@
 		    <artifactId>jackson-databind</artifactId>
 		    <version>${jackson.version}</version>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.json</groupId>
+		    <artifactId>json</artifactId>
+		    <version>20170516</version>
+		</dependency>
+         
+        <!-- MySQL -->
+        
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
+        </dependency>
 		
  	</dependencies> 
  	
