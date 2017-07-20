@@ -3,26 +3,26 @@ package com.variaveis.dao.conexao;
 public enum TipoConexao {
     
     DEVELOPMENT() {
-        protected String host() {
+        public String host() {
             return "localhost";
         }
-        protected Integer port() {
+        public Integer port() {
         	return 3306;
         }
-        protected String username() {
+        public String username() {
             return "root";
         }
-        protected String password() {
+        public String password() {
             return "123456";
         }
     };
     
     TipoConexao() { }
     
-    protected abstract String host();
-    protected abstract Integer port();
-    protected abstract String username();
-    protected abstract String password();
+    public abstract String host();
+    public abstract Integer port();
+    public abstract String username();
+    public abstract String password();
     
 
 }
