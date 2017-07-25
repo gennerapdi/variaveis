@@ -49,6 +49,7 @@
 	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/controller/appController.js"></script>
 	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/controller/exemplo/exemploController.js"></script>
 	
+	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/service/usuarioService.js"></script>
 	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/service/exemploService.js"></script>
 	
 </body>
