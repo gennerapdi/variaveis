@@ -1,10 +1,11 @@
 'use strict';
 
-app.controller('ExemploController', ['$scope', 'ExemploService', 
-  function ($scope, ExemploService) {
+app.controller('ExemploController', ['$scope', 'ExemploService', 'UsuarioHandler', 'TelefoneHandler', 
+  function ($scope, ExemploService, UsuarioHandler, TelefoneHandler) {
 
 	var init = function () {
-		$scope.usuarios = [];
+		$scope.usuario = [];
+		$scope.usuario.telefones = [];
 		$scope.listar();
 	};
 	
@@ -18,7 +19,10 @@ app.controller('ExemploController', ['$scope', 'ExemploService',
 	};		
 	
 	$scope.salvar = function(usuario) {
-		ExemploService.salvar(usuario)
+    	var usuarioHandler = UsuarioHandler.handle(usuario);
+    	var telefoneHandler = TelefoneHandler.handleList(usuario.telefones);
+    	usuarioHandler.telefones = telefoneHandler;
+		ExemploService.salvar(usuarioHandler)
 		    .then(function(response) {
 		    	console.log(response.pdi);
 		    	$scope.usuarios.push(usuario);

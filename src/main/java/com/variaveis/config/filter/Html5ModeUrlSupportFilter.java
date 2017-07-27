@@ -23,7 +23,7 @@ public class Html5ModeUrlSupportFilter implements Filter {
 		if(isView(request) || isStatic(request) || isApi(request) || isAuthentication(request)) {
 			filterChain.doFilter(request, response);
 		} else {
-			request.getRequestDispatcher("/index.jsp")
+			request.getRequestDispatcher("/WEB-INF/index.jsp")
 				   .forward(request, response);
 		}
 	}

@@ -1,23 +1,30 @@
 package com.variaveis.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
-import com.variaveis.dao.handler.ExemploHandler;
 import com.variaveis.entity.Usuario;
 
 @Repository
 public class ExemploDAO {
 
-	@Autowired private JdbcTemplate jdbcTemplate;
+	@Autowired private HibernateTemplate hibernateTemplate;
 
 	public List<Usuario> findAll() throws Exception {
-		String sql = "SELECT * FROM usuario";
-		List<Map<String, Object>> rows = jdbcTemplate.queryForList(sql);
-        return ExemploHandler.create(rows).list();
+		return hibernateTemplate.loadAll(Usuario.class);
     } 
+	
+	public Usuario get(Long id) {		
+		return hibernateTemplate.get(Usuario.class, id);
+	}
+	
+	public Usuario save(Usuario usuario) {		
+		Long id = (Long) hibernateTemplate.save(usuario);
+		hibernateTemplate.flush();
+		return get(id);
+	}
+	
 }
