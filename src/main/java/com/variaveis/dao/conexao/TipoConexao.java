@@ -4,16 +4,16 @@ public enum TipoConexao {
     
     DEVELOPMENT() {
         public String host() {
-            return "localhost";
+            return "10.0.1.202";
         }
         public Integer port() {
-        	return 3306;
+        	return 5432;
         }
         public String username() {
-            return "root";
+            return "administrador";
         }
         public String password() {
-            return "123456";
+            return "gennera@2017";
         }
     };
     

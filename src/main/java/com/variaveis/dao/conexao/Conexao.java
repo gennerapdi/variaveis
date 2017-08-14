@@ -6,8 +6,8 @@ import java.sql.DriverManager;
 
 public class Conexao {
 
-    public static String URL = "jdbc:mysql://%s:%s/%s?zeroDateTimeBehavior=convertToNull&autoReconnect=true";
-    private static String DRIVER = "com.mysql.jdbc.Driver";
+    public static String URL = "jdbc:postgresql://%s:%s/%s";
+    private static String DRIVER = "org.postgresql.Driver";
     private static TipoConexao CONEXAO = TipoConexao.DEVELOPMENT;
     
     public static Connection getConnection() { 

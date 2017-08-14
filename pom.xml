@@ -17,7 +17,7 @@
   		<spring.version>4.2.5.RELEASE</spring.version>  
         <hibernate.version>4.3.11.Final</hibernate.version>
         <jackson.version>2.4.3</jackson.version>
-        <postgresql.connector.version>9.2-1003-jdbc4</postgresql.connector.version>
+        <postgresql.connector.version>42.1.4.jre6</postgresql.connector.version>
   		<jdk.version>1.6</jdk.version>  
  	</properties>
    
