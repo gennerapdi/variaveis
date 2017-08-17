@@ -35,8 +35,8 @@ public class DBConfig {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-        dataSource.setUrl(String.format("jdbc:mysql://%s:%s/variaveis", CONEXAO.host(), CONEXAO.port()));
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl(String.format("jdbc:postgresql://%s:%s/variaveis", CONEXAO.host(), CONEXAO.port()));
         dataSource.setUsername(CONEXAO.username());
         dataSource.setPassword(CONEXAO.password());
         return dataSource;
@@ -63,7 +63,7 @@ public class DBConfig {
     
     private Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.ProgressDialect");
         properties.setProperty("hibernate.show_sql", "true");
         properties.setProperty("hibernate.format_sql", "true");
         return properties;
