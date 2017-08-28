@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -23,9 +25,12 @@ public class Grupo {
 	@OneToMany(mappedBy = "grupo",fetch = FetchType.LAZY, cascade=CascadeType.ALL,targetEntity = Variavel.class)
 	private List<Variavel> variaveis;
 
-
-//	
-//	private Grupo grupoPai;
+	@ManyToOne
+	@JoinColumn(name = "id_grupo_pai", referencedColumnName = "id_grupo")
+	private Grupo grupoPai;
+	
+	@OneToMany(mappedBy = "grupoPai", fetch = FetchType.LAZY, cascade=CascadeType.ALL, targetEntity = Grupo.class)
+	private List<Grupo> gruposFilhos;
 	
 	@Column(name="titulo")
 	private String titulo;
@@ -38,13 +43,13 @@ public class Grupo {
 		this.id = id;
 	}
 
-//	public Grupo getGrupo() {
-//		return grupo;
-//	}
-//
-//	public void setGrupo(Grupo grupo) {
-//		this.grupo = grupo;
-//	}
+	public Grupo getGrupoPai() {
+		return grupoPai;
+	}
+
+	public void setGrupoPai(Grupo grupo) {
+		this.grupoPai = grupo;
+	}
 
 	public String getTitulo() {
 		return titulo;
@@ -61,8 +66,13 @@ public class Grupo {
 	public void setVariaveis(List<Variavel> variaveis) {
 		this.variaveis = variaveis;
 	}
-	
-	
-	
+
+	public List<Grupo> getGruposFilhos() {
+		return gruposFilhos;
+	}
+
+	public void setGruposFilhos(List<Grupo> gruposFilhos) {
+		this.gruposFilhos = gruposFilhos;
+	}
 
 }
