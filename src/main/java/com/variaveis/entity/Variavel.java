@@ -1,11 +1,19 @@
 package com.variaveis.entity;
 
+import java.util.List;
+
+import javax.persistence.CollectionTable;
 import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -39,10 +47,12 @@ public class Variavel {
 	private String clausulaWhere;
 	
 	@Column(name="contexto")
-	private String contexto;
+	@Enumerated(EnumType.ORDINAL)
+	private Contexto contexto;
 	
 	@Column(name="tipo_variavel")
-	private Integer tipoVariavel;
+	@Enumerated(EnumType.ORDINAL)
+	private TipoVariavel tipoVariavel;
 	
 	@Column(name="menu_especificacao")
 	private String menuEspecificacao;
@@ -52,7 +62,19 @@ public class Variavel {
 	
 	@Column(name="descricao_especificacao")
 	private String descricaoEspecificacao;
+	
+	@ElementCollection(targetClass = Visao.class) 
+	@CollectionTable(name = "variavel_visao",
+	    joinColumns = @JoinColumn(name = "id_variavel"))
+	@Column(name = "id_visao")
+	private List<Visao> visoes;
 
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name="variavel_parametro", 
+    	joinColumns={@JoinColumn(name="id_variavel")},
+    	inverseJoinColumns={@JoinColumn(name="id_parametro")})
+	private List<Parametro> parametro;
+	
 	public Integer getId() {
 		return id;
 	}
@@ -109,19 +131,19 @@ public class Variavel {
 		this.clausulaWhere = clausulaWhere;
 	}
 
-	public String getContexto() {
+	public Contexto getContexto() {
 		return contexto;
 	}
 
-	public void setContexto(String contexto) {
+	public void setContexto(Contexto contexto) {
 		this.contexto = contexto;
 	}
 
-	public Integer getTipoVariavel() {
+	public TipoVariavel getTipoVariavel() {
 		return tipoVariavel;
 	}
 
-	public void setTipoVariavel(Integer tipoVariavel) {
+	public void setTipoVariavel(TipoVariavel tipoVariavel) {
 		this.tipoVariavel = tipoVariavel;
 	}
 
@@ -147,6 +169,22 @@ public class Variavel {
 
 	public void setDescricaoEspecificacao(String descricaoEspecificacao) {
 		this.descricaoEspecificacao = descricaoEspecificacao;
+	}
+
+	public List<Visao> getVisoes() {
+		return visoes;
+	}
+
+	public void setVisoes(List<Visao> visoes) {
+		this.visoes = visoes;
+	}
+
+	public List<Parametro> getParametro() {
+		return parametro;
+	}
+
+	public void setParametro(List<Parametro> parametro) {
+		this.parametro = parametro;
 	}
 
 }
