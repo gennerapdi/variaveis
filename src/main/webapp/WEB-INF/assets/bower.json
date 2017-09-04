@@ -4,15 +4,12 @@
   "authors": [
     "gennera.pdi"
   ],
-  "description": "bla bla",
   "main": "",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "lib"
   ],
   "dependencies": {
     "jquery": "^3.2.1",
