@@ -1,118 +1,115 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
 		                     http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
-	<modelVersion>4.0.0</modelVersion>
-  	
-  	<groupId>com.gennera</groupId>
-  	<artifactId>com.variaveis</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
 
-  	<packaging>war</packaging>
-  	
-  	<name>Variáveis</name>
-  	  
-	<properties>  
-  		<spring.version>4.2.5.RELEASE</spring.version>  
-        <hibernate.version>4.3.11.Final</hibernate.version>
-        <jackson.version>2.4.3</jackson.version>
-        <postgresql.connector.version>42.1.4.jre6</postgresql.connector.version>
-  		<jdk.version>1.6</jdk.version>  
- 	</properties>
-   
-  	<dependencies> 
-  	
-        <!-- Spring -->
-        
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
- 
-        <!-- Hibernate -->
-        
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-core</artifactId>
-            <version>${hibernate.version}</version>
-        </dependency>
-  	
-        <!-- Servlet+JSP+JSTL -->
-        
-        <dependency>
-            <groupId>javax.servlet</groupId>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.gennera</groupId>
+	<artifactId>com.variaveis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>war</packaging>
+
+	<name>Variáveis</name>
+
+	<properties>
+		<encoding>UTF-8</encoding>
+		<spring.version>4.2.5.RELEASE</spring.version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
+		<jackson.version>2.4.3</jackson.version>
+		<postgresql.connector.version>42.1.4.jre6</postgresql.connector.version>
+		<jdk.version>1.6</jdk.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- Spring -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Hibernate -->
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Servlet+JSP+JSTL -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
 			<scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet.jsp</groupId>
-            <artifactId>javax.servlet.jsp-api</artifactId>
-            <version>2.3.1</version>
-        </dependency>
-         
-        <!-- Jackson -->
-        
-        <dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-core</artifactId>
-		    <version>${jackson.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>${jackson.version}</version>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>javax.servlet.jsp-api</artifactId>
+			<version>2.3.1</version>
 		</dependency>
-		
+
+		<!-- Jackson -->
+
 		<dependency>
-		    <groupId>org.json</groupId>
-		    <artifactId>json</artifactId>
-		    <version>20170516</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
 		</dependency>
-		
-		
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20170516</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		    <version>${postgresql.connector.version}</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${postgresql.connector.version}</version>
 		</dependency>
-		
-         
-    
- 	</dependencies> 
- 	
- 	<profiles>
+
+	</dependencies>
+
+	<profiles>
 		<profile>
 			<id>dev</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-	 
-	 		<build>  
-	  			<finalName>variaveis</finalName>  
+
+			<build>
+				<finalName>variaveis</finalName>
 				<resources>
 					<resource>
 						<directory>src/main/resources</directory>
@@ -122,7 +119,7 @@
 						<filtering>true</filtering>
 					</resource>
 				</resources>
-		
+
 				<testResources>
 					<testResource>
 						<directory>src/test/resources</directory>
@@ -132,24 +129,36 @@
 						<filtering>true</filtering>
 					</testResource>
 				</testResources>
-	  
-			  	<plugins>  
-			   		<plugin>  
-			    			<groupId>org.apache.maven.plugins</groupId>  
-			    			<artifactId>maven-compiler-plugin</artifactId>  
-			   			<version>3.2</version>  
-			    			<configuration> 
-							<encoding>UTF-8</encoding> 
-			      				<failOnMissingWebXml>false</failOnMissingWebXml>
-			    				<source>${jdk.version}</source>  
-			     				<target>${jdk.version}</target>  
-			    			</configuration>  
-					</plugin> 
+
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-compiler-plugin</artifactId>
+						<version>3.2</version>
+						<configuration>
+							<encoding>UTF-8</encoding>
+							<failOnMissingWebXml>false</failOnMissingWebXml>
+							<source>${jdk.version}</source>
+							<target>${jdk.version}</target>
+						</configuration>
+					</plugin>
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.4.0</version>
 						<executions>
+							<execution>
+								<id>exec-npm-install</id>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>exec</goal>
+								</goals>
+								<configuration>
+									<executable>npm</executable>
+									<commandlineArgs>install</commandlineArgs>
+									<workingDirectory>src/main/webapp/WEB-INF/assets/</workingDirectory>
+								</configuration>
+							</execution>
 							<execution>
 								<phase>prepare-package</phase>
 								<goals>
@@ -163,11 +172,11 @@
 							</execution>
 						</executions>
 					</plugin>
-			  	</plugins>	  
-	 		</build> 
-	
+				</plugins>
+			</build>
+
 		</profile>
-		
+
 	</profiles>
 
 </project>

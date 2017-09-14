@@ -1,0 +1,18 @@
+<div class="input-group">
+	<input type="text" class="form-control" 
+	       uib-datepicker-popup="{{ formats[3] }}" 
+	       ng-model="datepickerModel" 
+	       is-open="popup1.opened" 
+	       datepicker-options="dateOptions" 
+	       ng-required="true" 
+	       alt-input-formats="altInputFormats"
+	       current-text="Hoje"
+	       clear-text="Limpar"
+	       close-text="Fechar" />
+	       
+	<span class="input-group-btn">
+	   	<button type="button" class="btn btn-default" ng-click="open1()">
+	   		<i class="glyphicon glyphicon-calendar"></i>
+		</button>
+	</span>
+</div>	
