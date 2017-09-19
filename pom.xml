@@ -91,30 +91,19 @@
 			<artifactId>json</artifactId>
 			<version>20170516</version>
 		</dependency>
-<<<<<<< HEAD
 		
         <!-- POSTGRESQL -->
-
-=======
-
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
->>>>>>> master
+        
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.connector.version}</version>
 		</dependency>
-<<<<<<< HEAD
         
  	</dependencies> 
  	
- 	<profiles>
-=======
-
-	</dependencies>
-
 	<profiles>
->>>>>>> master
+
 		<profile>
 			<id>dev</id>
 			<activation>
@@ -144,6 +133,7 @@
 				</testResources>
 
 				<plugins>
+				
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-compiler-plugin</artifactId>
@@ -155,36 +145,41 @@
 							<target>${jdk.version}</target>
 						</configuration>
 					</plugin>
+					
 					<plugin>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>exec-maven-plugin</artifactId>
 						<version>1.4.0</version>
 						<executions>
 							<execution>
-								<id>exec-npm-install</id>
+								<id>grunt-install</id>
 								<phase>generate-sources</phase>
 								<goals>
 									<goal>exec</goal>
 								</goals>
 								<configuration>
-									<executable>npm</executable>
-									<commandlineArgs>install</commandlineArgs>
+									<executable>grunt</executable>
+									<commandlineArgs>dev</commandlineArgs>
 									<workingDirectory>src/main/webapp/WEB-INF/assets/</workingDirectory>
-								</configuration>
-							</execution>
-							<execution>
-								<phase>prepare-package</phase>
-								<goals>
-									<goal>exec</goal>
-								</goals>
-								<configuration>
-									<executable>bower</executable>
-									<commandlineArgs>install</commandlineArgs>
-									<workingDirectory>src/main/webapp/WEB-INF/assets</workingDirectory>
 								</configuration>
 							</execution>
 						</executions>
 					</plugin>
+					
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>2.4</version>
+						<configuration>
+							<warSourceExcludes>
+								WEB-INF/assets/node_modules/**,
+								WEB-INF/assets/test/**,
+								WEB-INF/assets/dist/**,
+								WEB-INF/assets/production/**,
+							</warSourceExcludes>
+						</configuration>
+					</plugin>
+					
 				</plugins>
 			</build>
 

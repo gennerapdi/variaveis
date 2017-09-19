@@ -17,10 +17,11 @@
 	<title>Variáveis</title>
 
     <!-- Bootstrap -->
-    <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/lib/bootstrap/dist/css/bootstrap.css">
     <!-- Font Awesome -->
-    <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/bower_components/font-awesome/css/font-awesome.min.css">
+    <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/lib/font-awesome/css/font-awesome.min.css">
     
+    <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap-override.css">
     <link media="screen" charset="utf-8" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
     
 </head>
@@ -29,14 +30,14 @@
 
 	<div ui-view></div>
 	
-    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/jquery/dist/jquery.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/jquery-ui/jquery-ui.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/angular/angular.js"></script>
-	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/ngMask/dist/ngMask.js"></script>
-	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/bower_components/moment/moment.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/jquery-ui/jquery-ui.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/angular/angular.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/ngMask/dist/ngMask.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/lib/moment/moment.js"></script>
 	
 	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/app.js"></script>
 	<script type="text/javascript" charset="UTF-8" src="${pageContext.request.contextPath}/assets/js/app.router.js"></script>

@@ -1,0 +1,44 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/rafael/.nvm/v4.2.3/bin/node',
+1 verbose cli   '/home/rafael/.nvm/v4.2.3/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'package.json',
+1 verbose cli   '-g' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.3
+4 verbose install initial load of /home/rafael/.nvm/v4.2.3/lib/package.json
+5 verbose readDependencies loading dependencies from /home/rafael/.nvm/v4.2.3/lib/package.json
+6 silly cache add args [ 'package.json', null ]
+7 verbose cache add spec package.json
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'package.json',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: 'package.json',
+8 silly cache add   spec: '/home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json',
+8 silly cache add   type: 'local' }
+9 silly addLocalTarball shasum (computed) 9b1aad23fe86f7b61c0fdb6232afc13c764c29a8
+10 verbose addTmpTarball /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json not in flight; adding
+11 verbose addTmpTarball validating metadata from /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json
+12 verbose tar unpack /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json
+13 verbose tar unpacking to /tmp/npm-30458-ad20cf84/unpack-5658591beee5
+14 silly gentlyRm /tmp/npm-30458-ad20cf84/unpack-5658591beee5 is being purged
+15 verbose gentlyRm don't care about contents; nuking /tmp/npm-30458-ad20cf84/unpack-5658591beee5
+16 silly gunzTarPerm modes [ '775', '664' ]
+17 error not a package /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json
+18 error addLocal Could not install /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets/package.json
+19 verbose stack Error: ENOENT: no such file or directory, open '/tmp/npm-30458-ad20cf84/unpack-5658591beee5/package.json'
+19 verbose stack     at Error (native)
+20 verbose cwd /home/rafael/Desenvolvimento/repo/variaveis/src/main/webapp/WEB-INF/assets
+21 error Linux 2.6.32-696.10.1.el6.x86_64
+22 error argv "/home/rafael/.nvm/v4.2.3/bin/node" "/home/rafael/.nvm/v4.2.3/bin/npm" "install" "package.json" "-g"
+23 error node v4.2.3
+24 error npm  v2.14.7
+25 error path /tmp/npm-30458-ad20cf84/unpack-5658591beee5/package.json
+26 error code ENOENT
+27 error errno -2
+28 error syscall open
+29 error enoent ENOENT: no such file or directory, open '/tmp/npm-30458-ad20cf84/unpack-5658591beee5/package.json'
+29 error enoent This is most likely not a problem with npm itself
+29 error enoent and is related to npm not being able to find a file.
+30 verbose exit [ -2, true ]
