@@ -1,0 +1,9 @@
+{
+	"description":"",
+	"repository":{},
+	"readme":"",
+	"license":"",
+	"devDependencies": {
+		"bower": "^1.8.0"
+	}
+}

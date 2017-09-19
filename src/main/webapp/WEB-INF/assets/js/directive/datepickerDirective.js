@@ -41,4 +41,5 @@ app.directive('datepicker',
             init();
         }
     }
+
 }]);

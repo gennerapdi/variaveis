@@ -18,4 +18,5 @@ app.filter('telefone', [function() {
         };
         return telefone; 
     };
+    
 }]);

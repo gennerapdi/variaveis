@@ -19,17 +19,17 @@ app.config(['$stateProvider', '$httpProvider', '$urlRouterProvider', '$locationP
       })
       
       /*
-       * Exemplo
+       * Lista de variáveis
        */      
-      .state('app.exemplo', {
+      .state('app.variaveis', {
           abstract: true,
-          url: '/exemplo',
+          url: '/',
           template: '<div ui-view></div>'
       })
-      .state('app.exemplo.list', {
-          url: '/',
-          templateUrl: 'assets/views/app/exemplo/exemplo.html',
-          controller: 'ExemploController'
+      .state('app.variaveis.list', {
+          url: 'list/',
+          templateUrl: 'assets/views/app/list/variaveis-list.html',
+          controller: 'variaveisListController'
       });
 
   }])
