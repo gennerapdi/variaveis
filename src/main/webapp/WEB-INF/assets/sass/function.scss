@@ -1,0 +1,86 @@
+// ***** FUNCTION ***** //
+
+@mixin backface-visibility($value) {
+  -webkit-backface-visibility: $value;
+     -moz-backface-visibility: $value;
+      -ms-backface-visibility: $value;
+          backface-visibility: $value;
+}
+
+@mixin box-shadow($shadows...) {
+  -webkit-box-shadow: $shadows;
+     -moz-box-shadow: $shadows;
+      -ms-box-shadow: $shadows;
+       -o-box-shadow: $shadows;
+          box-shadow: $shadows;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+     -moz-transform: rotate($deg);
+       -o-transform: rotate($deg);
+          transform: rotate($deg);
+}
+
+@mixin transform-origin($from, $to) {
+  -webkit-transform-origin: $from $to;
+     -moz-transform-origin: $from $to;
+       -o-transform-origin: $from $to;
+          transform-origin: $from $to;
+}
+
+@mixin translateX($value) {
+  -webkit-transform: translateX($value);
+     -moz-transform: translateX($value);
+      -o-transition: translateX($value);
+          transform: translateX($value);
+}
+
+@mixin translateY($value) {
+  -webkit-transform: translateY($value);
+     -moz-transform: translateY($value);
+      -o-transition: translateY($value);
+          transform: translateY($value);
+}
+
+@mixin translate3d($x, $y, $z, $scale: null) {
+  @if $scale != null {
+    -webkit-transform: translate3d($x, $y, $z)scale($scale);
+       -moz-transform: translate3d($x, $y, $z)scale($scale);
+         -o-transform: translate3d($x, $y, $z)scale($scale);
+            transform: translate3d($x, $y, $z)scale($scale);
+  } @else {
+    -webkit-transform: translate3d($x, $y, $z);
+       -moz-transform: translate3d($x, $y, $z);
+         -o-transform: translate3d($x, $y, $z);
+            transform: translate3d($x, $y, $z);
+  }
+}
+
+@mixin transition($effect, $duration) {
+  -webkit-transition: $effect $duration;
+     -moz-transition: $effect $duration;
+       -o-transition: $effect $duration;
+          transition: $effect $duration;
+}
+
+@mixin transition-delay($timing) {
+  -webkit-transition-delay: $timing;
+     -moz-transition-delay: $timing;
+       -o-transition-delay: $timing;
+          transition-delay: $timing;
+}
+
+@mixin animation($name, $duration, $timing) {
+  -webkit-animation: $name $duration $timing;
+     -moz-animation: $name $duration $timing;
+       -o-animation: $name $duration $timing;
+          animation: $name $duration $timing;
+}
+
+@mixin no-select() {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
