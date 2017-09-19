@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+  	<div class="panel-heading">Cadastro Usuários</div>
+  	<div class="panel-body">
+
+  		<div class="row">
+		
+			<div class="col-md-offset-4 col-md-4">
+				<form ng-submit="salvar(usuario)">
+				  	<div class="form-group">
+					    <label for="nome">Nome</label>
+					    <input type="text" class="form-control" id="nome" placeholder="Nome" ng-model="usuario.nome">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="idade">Idade</label>
+					    <input type="text" class="form-control" id="idade" placeholder="Idade" ng-model="usuario.idade">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="telefone">Telefone</label>
+					    <input type="text" class="form-control" id="telefone" placeholder="Telefone" ng-model="telefoneModel"
+					    	mask='(99) 9?9999-9999' telefone telefone-model="usuario.telefones[0]">
+				  	</div>
+				  	<div class="form-group">
+					    <label for="data">Data Nascimento</label>					    
+		    			<datepicker datepicker-model="usuario.data"></datepicker>
+				  	</div>
+		  			<button type="submit" class="btn btn-default pull-right">Salvar</button>
+				</form>
+			</div>
+		</div>			
+
+  		<div class="row">
+  		
+  			<div class="col-md-offset-2 col-md-8">
+			
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Idade</th>
+							<th>Telefone</th>
+							<th>Data</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="usuario in usuarios track by $index">
+							<td>{{ usuario.nome }}</td>
+							<td>{{ usuario.idade }}</td>
+							<td>{{ usuario.telefones[0] | telefone }}</td>
+							<td>{{ usuario.data | date : 'dd/MM/yyyy' }}</td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>	
+
+		</div>
+  	</div>
+</div>
+		

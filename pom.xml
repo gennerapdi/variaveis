@@ -92,16 +92,14 @@
 		    <version>20170516</version>
 		</dependency>
 		
-		
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <!-- POSTGRESQL -->
+
 		<dependency>
 		    <groupId>org.postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
 		    <version>${postgresql.connector.version}</version>
 		</dependency>
-		
-         
-    
+        
  	</dependencies> 
  	
  	<profiles>
