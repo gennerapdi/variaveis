@@ -5,7 +5,7 @@ app.config(['$stateProvider', '$httpProvider', '$urlRouterProvider', '$locationP
 
     $locationProvider.html5Mode(true);
 	$locationProvider.hashPrefix('');
-    $urlRouterProvider.otherwise('/list/');
+    $urlRouterProvider.otherwise('/404');
 
     $stateProvider
 

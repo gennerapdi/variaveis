@@ -1,6 +1,7 @@
 'use strict';
 
-app.factory('ExemploService', function($http) {
+app.factory('ExemploService', ['$http', 
+    function($http) {
 	
 	var usuarios = {};
 	usuarios.listar = function() {
@@ -12,4 +13,4 @@ app.factory('ExemploService', function($http) {
 
     return usuarios;
     
-});
+}]);

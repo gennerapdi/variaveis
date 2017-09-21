@@ -1,6 +1,6 @@
 'use strict';
 
-app.filter('telefone', function() {
+app.filter('telefone', [function() {
     
     return function(input) {
     	var telefone = "";
@@ -18,4 +18,5 @@ app.filter('telefone', function() {
         };
         return telefone; 
     };
-});
+    
+}]);

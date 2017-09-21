@@ -1,4 +1,6 @@
-app.directive('telefone', function($filter) {
+app.directive('telefone', 
+    ['$filter',
+    function($filter) {
     
     return {
         restrict: 'A',
@@ -48,4 +50,5 @@ app.directive('telefone', function($filter) {
             init();
         }
     }
-});
+
+}]);

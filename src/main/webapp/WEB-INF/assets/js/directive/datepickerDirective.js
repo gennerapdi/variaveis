@@ -1,4 +1,5 @@
-app.directive('datepicker', function() {
+app.directive('datepicker', 
+    [function() {
     
     return {
         restrict: 'E',
@@ -40,4 +41,5 @@ app.directive('datepicker', function() {
             init();
         }
     }
-});
+
+}]);

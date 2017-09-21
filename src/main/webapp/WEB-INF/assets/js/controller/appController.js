@@ -1,10 +1,11 @@
 'use strict';
 
-app.controller('AppController', function ($scope) {
+app.controller('AppController', ['$scope',
+  function ($scope) {
 
 	var init = function () {
 	};
 	
   	init();
 
-});
+}]);

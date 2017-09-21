@@ -91,17 +91,30 @@
 			<artifactId>json</artifactId>
 			<version>20170516</version>
 		</dependency>
+<<<<<<< HEAD
+		
+        <!-- POSTGRESQL -->
+
+=======
 
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+>>>>>>> master
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>${postgresql.connector.version}</version>
 		</dependency>
+<<<<<<< HEAD
+        
+ 	</dependencies> 
+ 	
+ 	<profiles>
+=======
 
 	</dependencies>
 
 	<profiles>
+>>>>>>> master
 		<profile>
 			<id>dev</id>
 			<activation>

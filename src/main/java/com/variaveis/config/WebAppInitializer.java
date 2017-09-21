@@ -1,4 +1,3 @@
-
 package com.variaveis.config;
 
 import javax.servlet.Filter;
